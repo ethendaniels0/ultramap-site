@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="ultramap Documentation - Learn how to use ultramap for whiteboarding and brainstorming.">
     <title>Documentation - ultramap</title>
+    <link rel="icon" type="image/svg+xml" href="ultramap-icon.svg">
     <link rel="stylesheet" href="styles.css">
     <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XYHNKHT2C0"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'GA_MEASUREMENT_ID');
+        gtag('config', 'G-XYHNKHT2C0');
     </script>
 </head>
 <body>
@@ -23,6 +24,7 @@
                 <li><a href="index.html#features">Features</a></li>
                 <li><a href="index.html#pricing">Pricing</a></li>
                 <li><a href="docs.html">Docs</a></li>
+                <li><a href="blog.html">Blog</a></li>
                 <li><a href="index.html#pricing" class="btn-primary">Buy Now</a></li>
             </ul>
         </div>
@@ -31,126 +33,243 @@
     <div class="docs-container">
         <div class="docs-content">
             <h1>Documentation</h1>
-            <p>Welcome to ultramap documentation. Learn how to get started and make the most of your whiteboarding experience.</p>
+            <p>Welcome to ultramap documentation. Learn how to get started and make the most of your AI-powered whiteboarding experience.</p>
+
+            <h2>Introduction</h2>
+            <p><strong>ultramap</strong> is a premium desktop application that combines visual whiteboarding with AI-powered knowledge management. It provides an infinite canvas where you can capture ideas, organize information, and discover connections between your thoughts using semantic search and automatic relationship detection.</p>
+
+            <h3>Platform Support</h3>
+            <p>ultramap is available for:</p>
+            <ul>
+                <li><strong>macOS:</strong> DMG and ZIP installers</li>
+                <li><strong>Windows:</strong> NSIS installer and portable executable</li>
+                <li><strong>Linux:</strong> AppImage and DEB packages</li>
+            </ul>
 
             <h2>Getting Started</h2>
-            <p>ultramap is designed to be simple and intuitive. After purchasing, you'll receive a download link for your platform.</p>
+            <p>After purchasing, you'll receive download links for all platforms.</p>
 
             <h3>Installation</h3>
-            <p>Download ultramap for your operating system and follow the installation instructions. ultramap is available for macOS, Windows, and Linux.</p>
+            <p>Download ultramap for your operating system and follow the installation instructions. All data is stored locally—no cloud accounts required.</p>
 
-            <h3>First Steps</h3>
-            <p>When you first open ultramap, you'll be greeted with a blank canvas. Here are the basics:</p>
+            <h3>First Launch</h3>
+            <p>When you first open ultramap, you'll see an empty canvas with a toolbar on the left side. The canvas uses a dot grid background to help with spatial organization.</p>
+
+            <h3>Navigation</h3>
             <ul>
-                <li>Click and drag to pan around your canvas</li>
-                <li>Use the toolbar to add notes, shapes, and frames</li>
-                <li>Double-click anywhere to create a new note</li>
-                <li>Press <code>/</code> to access the AI assistant</li>
+                <li><strong>Pan:</strong> Click and drag with the middle mouse button or use the scroll wheel while holding Shift</li>
+                <li><strong>Zoom:</strong> Use the scroll wheel or zoom controls in the bottom-right corner</li>
+                <li><strong>Reset View:</strong> Press <code>Cmd/Ctrl + 0</code> to fit all content</li>
             </ul>
 
-            <h2>Features</h2>
+            <h3>Creating Your First Note</h3>
+            <ol>
+                <li>Press <code>S</code> or click the Sticky Note tool in the toolbar</li>
+                <li>Click anywhere on the canvas to place a sticky note</li>
+                <li>Type your content directly into the note</li>
+                <li>Click outside the note or press <code>Escape</code> to finish editing</li>
+            </ol>
 
-            <h3>AI-Powered Brainstorming</h3>
-            <p>ultramap's AI assistant helps you brainstorm and organize ideas. Simply press <code>/</code> anywhere on your canvas to activate the AI assistant.</p>
-            <p>The AI can help you:</p>
+            <h2>Content Types</h2>
+
+            <h3>Sticky Notes (S)</h3>
+            <p>Classic sticky notes for quick ideas and reminders. Customizable background color, text color, and font size. Perfect for brainstorming and task tracking.</p>
+
+            <h3>Text Nodes (T)</h3>
+            <p>Plain text without sticky note styling, ideal for labels and annotations. Great for titles, headers, and clean text displays.</p>
+
+            <h3>Shapes (R, E)</h3>
+            <p>Rectangle and Circle/Ellipse shapes for diagrams and visual organization. Customizable fill color, border color, and border width.</p>
+
+            <h3>Frames (Cmd/Ctrl + G)</h3>
+            <p>Container nodes that visually group and organize related content. Select multiple nodes and press <code>Cmd/Ctrl + G</code> to create a frame. Children move with the frame automatically.</p>
+
+            <h3>Website Cards (W)</h3>
+            <p>Rich preview cards that display website metadata. Press <code>W</code> and enter a URL. Automatically fetches title, description, favicon, and preview image.</p>
+
+            <h3>YouTube Cards (Y)</h3>
+            <p>Embedded YouTube video players with metadata. Press <code>Y</code> and enter a YouTube URL for inline video playback.</p>
+
+            <h2>AI Assistant Integration</h2>
+            <p>ultramap's most powerful feature is the ability to connect AI assistants through the <strong>Model Context Protocol (MCP)</strong>.</p>
+
+            <h3>Supported Assistants</h3>
             <ul>
-                <li>Generate ideas and suggestions</li>
-                <li>Organize your thoughts into structured frameworks</li>
-                <li>Create outlines and plans</li>
-                <li>Expand on existing concepts</li>
+                <li><strong>Claude Desktop:</strong> Anthropic's desktop application</li>
+                <li><strong>ChatGPT Desktop:</strong> OpenAI's desktop application</li>
+                <li><strong>VS Code:</strong> With MCP extension support</li>
             </ul>
 
-            <h3>Whiteboard Tools</h3>
-            <p>ultramap includes all the essential whiteboarding tools you need:</p>
+            <h3>Setup</h3>
+            <ol>
+                <li>Open <strong>AI Assistants</strong> settings from the View menu or press <code>Cmd/Ctrl + ,</code></li>
+                <li>Select your AI assistant (e.g., Claude Desktop)</li>
+                <li>Click <strong>"Connect [Assistant Name]"</strong> to auto-configure</li>
+                <li>Restart your AI assistant to activate the connection</li>
+            </ol>
+
+            <h3>What AI Assistants Can Do</h3>
+            <p>Your AI assistant has full control over your whiteboard and can:</p>
             <ul>
-                <li><strong>Notes:</strong> Add text notes anywhere on your canvas</li>
-                <li><strong>Sticky Notes:</strong> Create colored sticky notes for quick ideas</li>
-                <li><strong>Frames:</strong> Group related content together in frames</li>
-                <li><strong>Connectors:</strong> Draw lines and arrows to show relationships</li>
-                <li><strong>Shapes:</strong> Add rectangles, circles, and other shapes</li>
-                <li><strong>Images:</strong> Embed images directly on your canvas</li>
+                <li><strong>Create content:</strong> Sticky notes, text nodes, shapes, frames, website cards, YouTube cards</li>
+                <li><strong>Organize:</strong> Auto-arrange nodes in grids, group related content, align and distribute</li>
+                <li><strong>Search:</strong> Semantic search across all content, find similar notes, discover patterns</li>
+                <li><strong>Analyze:</strong> Detect clusters, find paths between concepts, explore relationships</li>
+                <li><strong>Manage:</strong> Update content, change styles, move and resize nodes, create connections</li>
             </ul>
 
-            <h3>Embedded Content</h3>
-            <p>Embed external content directly into your canvas:</p>
+            <h3>Example Commands</h3>
             <ul>
-                <li>Web pages and links</li>
-                <li>Videos and media</li>
-                <li>Documents and PDFs</li>
-                <li>Code snippets</li>
+                <li>"Create 5 sticky notes with ideas for the marketing campaign"</li>
+                <li>"Arrange all my sticky notes in a 4-column grid"</li>
+                <li>"Search for notes about deadlines and show me the top 5 results"</li>
+                <li>"Find related clusters of ideas on my board"</li>
+                <li>"Group all the marketing-related notes into a frame"</li>
             </ul>
 
             <h2>Keyboard Shortcuts</h2>
-            <p>Speed up your workflow with these keyboard shortcuts:</p>
+
+            <h3>Tools</h3>
             <ul>
-                <li><code>N</code> - Create new note</li>
-                <li><code>F</code> - Create frame</li>
-                <li><code>/</code> - Open AI assistant</li>
-                <li><code>Space + Drag</code> - Pan canvas</li>
-                <li><code>Cmd/Ctrl + Z</code> - Undo</li>
-                <li><code>Cmd/Ctrl + Shift + Z</code> - Redo</li>
-                <li><code>Cmd/Ctrl + S</code> - Save</li>
-                <li><code>Cmd/Ctrl + D</code> - Duplicate selection</li>
+                <li><code>V</code> - Select tool</li>
+                <li><code>S</code> - Sticky note</li>
+                <li><code>T</code> - Text node</li>
+                <li><code>R</code> - Rectangle</li>
+                <li><code>E</code> - Circle/Ellipse</li>
+                <li><code>C</code> - Connector</li>
+                <li><code>W</code> - Website card</li>
+                <li><code>Y</code> - YouTube card</li>
             </ul>
 
-            <h2>Tips and Tricks</h2>
+            <h3>Navigation</h3>
+            <ul>
+                <li><code>Cmd/Ctrl + 0</code> - Fit view / Reset zoom</li>
+                <li><code>Cmd/Ctrl + +</code> - Zoom in</li>
+                <li><code>Cmd/Ctrl + -</code> - Zoom out</li>
+                <li><code>Cmd/Ctrl + F</code> - Open search panel</li>
+                <li><code>Escape</code> - Cancel / Deselect / Close</li>
+            </ul>
+
+            <h3>Editing</h3>
+            <ul>
+                <li><code>Enter</code> - Edit selected node</li>
+                <li><code>Delete</code> / <code>Backspace</code> - Delete selected nodes/edges</li>
+                <li><code>Cmd/Ctrl + Z</code> - Undo</li>
+                <li><code>Cmd/Ctrl + Shift + Z</code> - Redo</li>
+                <li><code>Cmd/Ctrl + C</code> - Copy</li>
+                <li><code>Cmd/Ctrl + V</code> - Paste</li>
+                <li><code>Cmd/Ctrl + D</code> - Duplicate</li>
+            </ul>
+
+            <h3>Organization</h3>
+            <ul>
+                <li><code>Cmd/Ctrl + G</code> - Group selection into frame</li>
+                <li><code>Cmd/Ctrl + Shift + G</code> - Ungroup/unframe</li>
+                <li><code>Cmd/Ctrl + A</code> - Select all nodes</li>
+                <li><code>Cmd/Ctrl + Shift + L</code> - Align left</li>
+                <li><code>Cmd/Ctrl + Shift + R</code> - Align right</li>
+                <li><code>Cmd/Ctrl + Shift + T</code> - Align top</li>
+                <li><code>Cmd/Ctrl + Shift + B</code> - Align bottom</li>
+            </ul>
+
+            <h3>Application</h3>
+            <ul>
+                <li><code>Cmd/Ctrl + N</code> - New board</li>
+                <li><code>Cmd/Ctrl + O</code> - Open board</li>
+                <li><code>Cmd/Ctrl + S</code> - Save (auto-save is enabled)</li>
+                <li><code>Cmd/Ctrl + ,</code> - Open preferences / AI Assistants</li>
+            </ul>
+
+            <h2>Tips and Best Practices</h2>
 
             <h3>For Writers</h3>
             <ul>
                 <li>Use frames to organize chapters or story arcs</li>
                 <li>Create character maps with sticky notes and connectors</li>
-                <li>Use the AI to help develop plot points and character backgrounds</li>
+                <li>Leverage semantic search to find related plot points</li>
+                <li>Use AI assistants to brainstorm character backgrounds</li>
             </ul>
 
             <h3>For Designers</h3>
             <ul>
-                <li>Create mood boards with embedded images</li>
-                <li>Organize design systems with frames</li>
-                <li>Use the AI to generate design concepts and alternatives</li>
+                <li>Create mood boards with website cards for inspiration</li>
+                <li>Organize design systems with frames and color-coding</li>
+                <li>Use shapes for wireframes and layout sketches</li>
+                <li>Ask AI assistants to organize elements by theme</li>
             </ul>
 
             <h3>For Engineers</h3>
             <ul>
                 <li>Diagram system architecture with shapes and connectors</li>
-                <li>Embed code snippets for reference</li>
                 <li>Use frames to represent different services or components</li>
+                <li>Add website cards for documentation references</li>
+                <li>Leverage graph analysis to understand dependencies</li>
             </ul>
 
             <h3>For Students</h3>
             <ul>
                 <li>Create visual study guides and mind maps</li>
-                <li>Connect concepts with arrows and lines</li>
-                <li>Use the AI to help explain complex topics</li>
+                <li>Connect concepts with arrows to show relationships</li>
+                <li>Use semantic search to find related topics</li>
+                <li>Ask AI assistants to help explain complex concepts</li>
             </ul>
+
+            <h2>Advanced Features</h2>
+
+            <h3>Knowledge Graph</h3>
+            <p>ultramap treats your content as a knowledge graph with nodes (ideas) and edges (relationships). The system automatically discovers semantic relationships between your content.</p>
+
+            <h3>Semantic Search</h3>
+            <p>Press <code>Cmd/Ctrl + F</code> to search your board. ultramap uses AI embeddings to find semantically related content, not just exact text matches.</p>
+
+            <h3>Multiple Boards</h3>
+            <p>Create separate boards for different projects. Boards are stored as SQLite database files—all data stays on your machine.</p>
+
+            <h3>Local-First Privacy</h3>
+            <p>All data is stored locally on your computer. No cloud accounts, no data sent to external servers. Your ideas stay private.</p>
 
             <h2>Troubleshooting</h2>
 
+            <h3>AI Assistant Not Connecting</h3>
+            <ol>
+                <li>Verify the AI assistant is installed and running</li>
+                <li>Check that ultramap is running</li>
+                <li>Try manual configuration if auto-config fails</li>
+                <li>Restart both applications after configuration</li>
+            </ol>
+
             <h3>Performance Issues</h3>
-            <p>If ultramap is running slowly:</p>
             <ul>
+                <li>Consider splitting large boards (1000+ nodes) into multiple smaller boards</li>
                 <li>Close unused boards to free up memory</li>
-                <li>Reduce the number of embedded images on large canvases</li>
-                <li>Clear your cache from the settings menu</li>
+                <li>Restart ultramap periodically for long sessions</li>
             </ul>
 
-            <h3>Syncing Issues</h3>
-            <p>If your boards aren't syncing properly:</p>
+            <h3>Content Not Appearing</h3>
             <ul>
-                <li>Check your internet connection</li>
-                <li>Force a sync from the menu bar</li>
-                <li>Restart ultramap</li>
+                <li>Press <code>V</code> to ensure you're in Select mode</li>
+                <li>Press <code>Cmd/Ctrl + 0</code> to fit all content in view</li>
+                <li>Use the minimap (bottom-right) to locate content</li>
+            </ul>
+
+            <h2>System Requirements</h2>
+            <ul>
+                <li><strong>Operating System:</strong> macOS 10.13+, Windows 10+, or Linux (Ubuntu 18.04+)</li>
+                <li><strong>Memory:</strong> 4GB RAM minimum, 8GB recommended</li>
+                <li><strong>Storage:</strong> 500MB for application + board data</li>
+                <li><strong>Display:</strong> 1280x720 minimum resolution</li>
             </ul>
 
             <h2>Support</h2>
-            <p>Need more help? We're here for you:</p>
+            <p>Need more help?</p>
             <ul>
-                <li>Email: support@ultramap.io</li>
-                <li>Community: Join our Discord community</li>
-                <li>Updates: Follow us on Twitter for updates and tips</li>
+                <li><strong>Email:</strong> support@ultramap.io</li>
+                <li><strong>Full User Guide:</strong> Included with your download</li>
+                <li><strong>MCP Documentation:</strong> <a href="https://modelcontextprotocol.io" target="_blank">modelcontextprotocol.io</a></li>
             </ul>
 
             <h2>License and Updates</h2>
-            <p>Your ultramap license is lifetime and includes all future updates. You'll receive automatic updates as we add new features and improvements.</p>
+            <p>Your ultramap license is lifetime and includes all future updates. You'll receive automatic update notifications as we add new features and improvements.</p>
             <p>Thank you for choosing ultramap!</p>
         </div>
     </div>
@@ -169,13 +288,14 @@
                             <li><a href="index.html#features">Features</a></li>
                             <li><a href="index.html#pricing">Pricing</a></li>
                             <li><a href="docs.html">Documentation</a></li>
+                            <li><a href="blog.html">Blog</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">
                         <h4>Company</h4>
                         <ul>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
                         </ul>
                     </div>
                 </div>
