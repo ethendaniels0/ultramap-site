@@ -20,12 +20,17 @@
     <nav class="navbar">
         <div class="container">
             <a href="index.html" class="logo">ultramap</a>
+            <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <ul class="nav-links">
                 <li><a href="index.html#features">Features</a></li>
                 <li><a href="index.html#pricing">Pricing</a></li>
                 <li><a href="docs.html">Docs</a></li>
                 <li><a href="blog.html">Blog</a></li>
-                <li><a href="index.html#pricing" class="btn-primary">Buy Now</a></li>
+                <li><a href="index.html#pricing" class="btn-primary">Download Beta</a></li>
             </ul>
         </div>
     </nav>
@@ -37,17 +42,17 @@
 
             <article class="blog-post">
                 <h2>Welcome to ultramap</h2>
-                <p class="post-meta">January 2025</p>
+                <p class="post-meta">October 19, 2025</p>
                 <p>ultramap is a desktop whiteboarding application that combines visual thinking with AI assistant integration. We're building a tool that stays out of your way while giving you powerful features when you need them.</p>
                 <p>Key features in early access:</p>
                 <ul>
                     <li>Infinite canvas with sticky notes, shapes, frames, and connectors</li>
-                    <li>Integration with Claude Desktop, ChatGPT, and VS Code via Model Context Protocol</li>
+                    <li>Integration with Claude Desktop and VS Code via Model Context Protocol</li>
                     <li>Semantic search and knowledge graph for discovering connections</li>
                     <li>Local-first storage - your data stays on your machine</li>
-                    <li>Available for macOS, Windows, and Linux</li>
+                    <li>Currently available for Windows (macOS and Linux coming soon)</li>
                 </ul>
-                <p>We're offering early access pricing at $10 (normally $20+) for early supporters. Your feedback will help shape the future of ultramap.</p>
+                <p>The v0.9.0 beta is completely free to download and use. The free beta will be available until the v1.0.0 release, at which point ultramap will be available as a one-time purchase with a lifetime license. Your feedback will help shape the future of ultramap.</p>
                 <p>More updates coming soon!</p>
             </article>
         </div>
@@ -84,5 +89,27 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            const hamburger = document.querySelector('.hamburger');
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                const navLinks = document.querySelector('.nav-links');
+                const hamburger = document.querySelector('.hamburger');
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    hamburger.classList.remove('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
