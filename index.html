@@ -58,6 +58,47 @@
         </div>
     </section>
 
+    <section class="feature-carousel-section">
+        <div class="container">
+            <div class="carousel-container">
+                <div class="carousel-slide active">
+                    <div class="carousel-content">
+                        <h2>Diagrams</h2>
+                        <p>Create flowcharts, system diagrams, and visual workflows with shapes and connectors.</p>
+                    </div>
+                    <div class="carousel-image">
+                        <img src="assets/flow.png" alt="Diagram features in ultramap">
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="carousel-content">
+                        <h2>Frames</h2>
+                        <p>Group and organize related content with frames that keep your ideas structured.</p>
+                    </div>
+                    <div class="carousel-image">
+                        <img src="assets/frames.png" alt="Frame features in ultramap">
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="carousel-content">
+                        <h2>Sticky Notes</h2>
+                        <p>Capture quick ideas and reminders with customizable sticky notes.</p>
+                    </div>
+                    <div class="carousel-image">
+                        <img src="assets/stickynotes.png" alt="Sticky note features in ultramap">
+                    </div>
+                </div>
+                <button class="carousel-btn prev" onclick="changeSlide(-1)">‹</button>
+                <button class="carousel-btn next" onclick="changeSlide(1)">›</button>
+                <div class="carousel-dots">
+                    <span class="dot active" onclick="goToSlide(0)"></span>
+                    <span class="dot" onclick="goToSlide(1)"></span>
+                    <span class="dot" onclick="goToSlide(2)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="features" class="features">
         <div class="container">
             <div class="feature-grid">
@@ -186,5 +227,43 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dots = document.querySelectorAll('.dot');
+
+        function showSlide(index) {
+            // Wrap around if index is out of bounds
+            if (index >= slides.length) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = slides.length - 1;
+            } else {
+                currentSlide = index;
+            }
+
+            // Hide all slides and deactivate all dots
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            // Show current slide and activate current dot
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        }
+
+        function changeSlide(direction) {
+            showSlide(currentSlide + direction);
+        }
+
+        function goToSlide(index) {
+            showSlide(index);
+        }
+
+        // Auto-advance carousel every 5 seconds
+        setInterval(() => {
+            changeSlide(1);
+        }, 5000);
+    </script>
 </body>
 </html>

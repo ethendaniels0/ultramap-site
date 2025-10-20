@@ -276,6 +276,126 @@ a:hover {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
+/* Feature Carousel Section */
+.feature-carousel-section {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--color-bg);
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    display: none;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.carousel-slide.active {
+    display: grid;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.carousel-content h2 {
+    margin-bottom: var(--spacing-md);
+    color: var(--color-primary);
+    font-size: 2rem;
+}
+
+.carousel-content p {
+    line-height: 1.6;
+    color: var(--color-text);
+    font-size: 1.125rem;
+}
+
+.carousel-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-image img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    font-size: 2rem;
+    color: var(--color-primary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.carousel-btn:hover {
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn.prev {
+    left: -60px;
+}
+
+.carousel-btn.next {
+    right: -60px;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-lg);
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--color-border);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot:hover {
+    background-color: var(--color-secondary);
+}
+
+.dot.active {
+    background-color: var(--color-primary);
+    width: 32px;
+    border-radius: 6px;
+}
+
 /* Features Section */
 .features {
     padding: var(--spacing-xl) 0;
@@ -721,5 +841,29 @@ a:hover {
     .ai-demo-content {
         padding-right: 0;
         margin-bottom: var(--spacing-md);
+    }
+
+    .carousel-slide {
+        grid-template-columns: 1fr;
+    }
+
+    .carousel-content {
+        margin-bottom: var(--spacing-md);
+        text-align: center;
+    }
+
+    .carousel-btn.prev,
+    .carousel-btn.next {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+
+    .carousel-btn.prev {
+        left: 10px;
+    }
+
+    .carousel-btn.next {
+        right: 10px;
     }
 }
